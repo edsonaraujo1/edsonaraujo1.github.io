@@ -13,6 +13,6 @@
                     <p class="text-justify">
                         Domínio do paradigma de orientação a objetos e interpretação de modelos UML;
 	Conhecimento em SQL Server, PL/SQL Oracle e MySql;
-	Programação em ASP.Net, ASP.Net MVC, ASP.Net Core C#, WebApi,  HTML5, PHP/PDO, C++, JQuery, Angular, NodeJs e Xamarin;
-	Domínio nas IDEs Visual Studio 2019, Dreamweaver, Fireworks, Sublime Text, Codeigniter, Zend, EntityFramework, PHPDesigner, MySQL Workbench, SQL Server Management , Oracle Developer, Visual Code e  Git Bash.
+	Programação em ASP.Net, ASP.Net MVC, ASP.Net Core C#, WebApi,  HTML5, PHP Laravel, C++, JQuery, Angular, NodeJs React-Native;
+	Domínio nas IDEs Visual Studio 2019, Dreamweaver, Fireworks, Sublime Text, EntityFramework, PHPDesigner, MySQL Workbench, SQL Server Management , Oracle Developer, Visual Code e  Git Bash.
                     </p>
