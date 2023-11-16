@@ -1,4 +1,4 @@
-## Edson de Araujo - GitHub Pages..
+## Edson de Araujo - Curriculo Apresentção..
 
 <h2 class="mb-3">Habilidades</h2>
                     <p class="text-justify">
