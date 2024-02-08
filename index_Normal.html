@@ -23,7 +23,105 @@
   <link href="css/style.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <style>
-    body{font-family: Verdana !important; color: #000; font-weight: 700; text-align: justify}.bg-primary{background-color: #1d858c !important}.text-primary{color: #1d858c !important}.text-fenatec{color: #f37227 !important;}.text-setetur{color: #f3219c !important;}a, a:active, a:focus, a:hover, a:link, a:visited{text-decoration: none; color: #1d858c}.atualizacao{font-size: 10px; color: #daa520}h1, h2, h3, h4, h5, h6{font-weight: 700; text-transform: uppercase; color: #343a40}.desktop{display: block}.mobile{display: none}@media(max-width:995px){.desktop{display: none}.mobile{display: block}.texto{font-size: 50px; text-align: center}.desc{text-align: center}.bg{background: url(../img/Fundo.png); background-repeat: no-repeat; background-attachment: fixed; background-position: center; top: 0; left: 0; bottom: 0; right: 0; position: absolute; z-index: -1}}.subheading{text-transform: lowercase !important;}.carousel-inner > .item > img, .carousel-inner > .item > a > img{width: 70%; margin: auto;}
+    body {
+      font-family: Verdana !important;
+      color: #000;
+      font-weight: 700;
+      text-align: justify
+    }
+
+    .bg-primary {
+      background-color: #1d858c !important
+    }
+
+    .text-primary {
+      color: #1d858c !important
+    }
+
+    .text-fenatec {
+      color: #f37227 !important;
+    }
+
+    .text-setetur {
+      color: #f3219c !important;
+    }
+
+    a,
+    a:active,
+    a:focus,
+    a:hover,
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: #1d858c
+    }
+
+    .atualizacao {
+      font-size: 10px;
+      color: #daa520
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #343a40
+    }
+
+    .desktop {
+      display: block
+    }
+
+    .mobile {
+      display: none
+    }
+
+    @media(max-width:995px) {
+      .desktop {
+        display: none
+      }
+
+      .mobile {
+        display: block
+      }
+
+      .texto {
+        font-size: 50px;
+        text-align: center
+      }
+
+      .desc {
+        text-align: center
+      }
+
+      .bg {
+        background: url(../img/Fundo.png);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1
+      }
+    }
+
+    .subheading {
+      text-transform: lowercase !important;
+    }
+
+    .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+  }
+     
    </style>
 </head>
 
@@ -1793,7 +1891,118 @@
     <script src="js/counter/jquery.counterup.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        $(document).ready(function () { $(".filter-b").click(function () { var value = $(this).attr('data-filter'); if (value == "all") { $('.filter').show('1000'); } else { $(".filter").not('.' + value).hide('3000'); $('.filter').filter('.' + value).show('3000'); } }); if ($(".filter-b").removeClass("active")) { $(this).removeClass("active"); } $(this).addClass("active"); }); /* SKILLS */ $(function () { $('.counter').counterUp({ delay: 10, time: 2000 }); }); const buttonenv = document.getElementById('Enviar'); buttonenv.style.opacity = 0.7; buttonenv.disabled = true; var erro; const formEl = document.getElementById('form-api'); formEl.addEventListener('submit', evento=>{evento.preventDefault(); const formData=new FormData(formEl); const data=Object.fromEntries(formData); if (window.erro==1){try{fetch('https://www.utyum.com.br/Seguro/Api/api/ContatoEmail/',{method: 'POST', headers:{'Content-Type': 'application/json'}, body: JSON.stringify(data)}).then(response=>{if (!response.ok){document.getElementById("msgemsis").innerHTML="<font color='red'>Mensagem não Enviada, falhou a requisição </font>"; return new Error('falhou a requisição')}if (response.status===404){document.getElementById("msgemsis").innerHTML="<font color='red'>Mensagem não Enviada, 404 não encontrado. </font>"; return new Error('não encontrou qualquer resultado')}buttonenv.disabled=true; $('div.con-form').find('input').val(''); $('div.con-form').find('textarea').val(''); $('div.con-form').find('select').val(''); $(function (){var staticBackdrop=document.getElementById('staticBackdrop'); var myModal=new bootstrap.Modal(staticBackdrop); myModal.show();});})}catch (e){document.getElementById("msgemsis").innerHTML="<font color='red'>Mensagem Erro: <br>" + e.message + ". </font > ";}}else{document.getElementById("msgemsis").innerHTML="<font color='red'>Mensagem não Enviada, Email esta invalido inválido </font>";}}); function isAnyEmpty(el){var isEmpty=false, v; el.each(function (e){v=$(this).val(); if (v=="" || v==null || v==undefined){isEmpty=true}}); return isEmpty;}var el=$('input, textarea, select'); el.on('keyup', function (){buttonenv.disabled=false;}); function checarEmail(){if (document.forms[0].email.value=="" || document.forms[0].email.value.indexOf('@')==-1 || document.forms[0].email.value.indexOf('.')==-1){document.getElementById("msgemail").innerHTML="<font color='red'>Email inválido </font>"; window.erro=0; return false;}else{document.getElementById("msgemail").innerHTML=''; document.getElementById("msgemsis").innerHTML=''; window.erro=1; return true;}}
+        $(document).ready(function () {
+
+            $(".filter-b").click(function () {
+                var value = $(this).attr('data-filter');
+                if (value == "all") {
+                    $('.filter').show('1000');
+                }
+                else {
+                    $(".filter").not('.' + value).hide('3000');
+                    $('.filter').filter('.' + value).show('3000');
+                }
+            });
+
+            if ($(".filter-b").removeClass("active")) {
+                $(this).removeClass("active");
+            }
+            $(this).addClass("active");
+        });
+
+        // SKILLS
+        $(function () {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 2000
+            });
+
+        });
+
+        const buttonenv = document.getElementById('Enviar');
+        buttonenv.style.opacity = 0.7;
+        buttonenv.disabled = true;
+        var erro;
+        const formEl = document.getElementById('form-api')
+        formEl.addEventListener('submit', evento => {
+            evento.preventDefault();
+            const formData = new FormData(formEl);
+            const data = Object.fromEntries(formData);
+
+            if (window.erro == 1) {
+
+                try {
+
+                    fetch('https://www.utyum.com.br/Seguro/Api/api/ContatoEmail/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    }).then(response => {
+                        if (!response.ok) {
+                            document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, falhou a requisição </font>";
+                            return new Error('falhou a requisição')
+                        }
+                        if (response.status === 404) {
+                            document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, 404 não encontrado. </font>";
+                            return new Error('não encontrou qualquer resultado')
+                        }
+                        buttonenv.disabled = true;
+                        $('div.con-form').find('input').val('');
+                        $('div.con-form').find('textarea').val('');
+                        $('div.con-form').find('select').val('');
+                        $(function () {
+                            var staticBackdrop = document.getElementById('staticBackdrop');
+                            var myModal = new bootstrap.Modal(staticBackdrop);
+                            myModal.show();
+                        });
+                    })
+
+                } catch (e) {
+                    document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem Erro: <br>" + e.message + ". </font > ";
+                }
+
+
+            } else {
+                document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, Email esta invalido inválido </font>";
+            }
+
+        });
+
+        function isAnyEmpty(el) {
+            var isEmpty = false,
+                v;
+            el.each(function (e) {
+                v = $(this).val();
+                if (v == "" || v == null || v == undefined) {
+                    isEmpty = true
+                }
+            });
+            return isEmpty;
+        }
+
+        var el = $('input, textarea, select');
+
+        el.on('keyup', function () {
+            buttonenv.disabled = false;
+        });
+
+        function checarEmail() {
+            if (document.forms[0].email.value == ""
+                || document.forms[0].email.value.indexOf('@') == -1
+                || document.forms[0].email.value.indexOf('.') == -1) {
+                document.getElementById("msgemail").innerHTML = "<font color='red'>Email inválido </font>";
+                window.erro = 0;
+                return false;
+            } else {
+                document.getElementById("msgemail").innerHTML = '';
+                document.getElementById("msgemsis").innerHTML = '';
+                window.erro = 1;
+                return true;
+            }
+        }
+
     </script>
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

@@ -823,11 +823,6 @@ button:disabled {
   color: tomato;
 }
 
-
-
-
-
-
 .carousel-control-next, .carousel-control-prev {
     position: absolute;
     top: 0;
@@ -858,4 +853,16 @@ button:disabled {
 
 .carousel-indicators .active {
     background-color: #1c70d3 !important;
+}
+
+.alin {
+    margin: auto;
+    display: block;
+    width: 82px;
+}
+
+.alin2 {
+    margin: auto;
+    display: block;
+    text-align: center;
 }
