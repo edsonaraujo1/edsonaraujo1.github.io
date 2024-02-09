@@ -1873,7 +1873,112 @@
     <script src="js/counter/jquery.counterup.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        $(document).ready(function () { $(".filter-b").click(function () { var value = $(this).attr('data-filter'); if (value == "all") { $('.filter').show('1000'); } else { $(".filter").not('.' + value).hide('3000'); $('.filter').filter('.' + value).show('3000'); } }); if ($(".filter-b").removeClass("active")) { $(this).removeClass("active"); } $(this).addClass("active"); }); /* SKILLS */ $(function () { $('.counter').counterUp({ delay: 10, time: 2000 }); }); const buttonenv = document.getElementById('Enviar'); buttonenv.style.opacity = 0.7; buttonenv.disabled = true; var erro; const formEl = document.getElementById('form-api') formEl.addEventListener('submit', evento => { evento.preventDefault(); const formData = new FormData(formEl); const data = Object.fromEntries(formData); if (window.erro == 1) {/*Hide spinner*/ showSpinner(); try { fetch('https://www.utyum.com.br/Seguro/Api/api/ContatoEmail/', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }).then(response => { if (!response.ok) { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, falhou a requisição </font>"; return new Error('falhou a requisição') } if (response.status === 404) { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, 404 não encontrado. </font>"; return new Error('não encontrou qualquer resultado') } buttonenv.disabled = true; $('div.con-form').find('input').val(''); $('div.con-form').find('textarea').val(''); $('div.con-form').find('select').val(''); $(function () { var staticBackdrop = document.getElementById('staticBackdrop'); var myModal = new bootstrap.Modal(staticBackdrop); myModal.show(); }); /*1.5sec delay */ setTimeout(() => { hideSpinner() }, 1500) }) } catch (e) { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem Erro: <br>" + e.message + ". </font > "; } } else { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, Email esta invalido inválido </font>"; } }); function isAnyEmpty(el) { var isEmpty = false, v; el.each(function (e) { v = $(this).val(); if (v == "" || v == null || v == undefined) { isEmpty = true } }); return isEmpty; } var el = $('input, textarea, select'); el.on('keyup', function () { buttonenv.disabled = false; }); function checarEmail() { if (document.forms[0].email.value == "" || document.forms[0].email.value.indexOf('@') == -1 || document.forms[0].email.value.indexOf('.') == -1) { document.getElementById("msgemail").innerHTML = "<font color='red'>Email inválido </font>"; window.erro = 0; return false; } else { document.getElementById("msgemail").innerHTML = ''; document.getElementById("msgemsis").innerHTML = ''; window.erro = 1; return true; } }
+        $(document).ready(function () {
+            $(".filter-b").click(function () {
+                var value = $(this).attr('data-filter');
+                if (value == "all") {
+                    $('.filter').show('1000');
+                }
+                else {
+                    $(".filter").not('.' + value).hide('3000');
+                    $('.filter').filter('.' + value).show('3000');
+                }
+            }
+            );
+            if ($(".filter-b").removeClass("active")) {
+                $(this).removeClass("active");
+            }
+            $(this).addClass("active");
+        }
+        );
+        /* SKILLS */
+        $(function () {
+            $('.counter').counterUp({
+                delay: 10, time: 2000
+            }
+            );
+        }
+        );
+        const buttonenv = document.getElementById('Enviar');
+        buttonenv.style.opacity = 0.7;
+        buttonenv.disabled = true;
+        var erro;
+        const formEl = document.getElementById('form-api');
+        formEl.addEventListener('submit', evento => {
+            evento.preventDefault();
+            const formData = new FormData(formEl);
+            const data = Object.fromEntries(formData);
+            if (window.erro == 1) {
+                /*Hide spinner*/
+                showSpinner();
+                try {
+                    fetch('https: //www.utyum.com.br/Seguro/Api/api/ContatoEmail/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    }).then(response => {
+                        if (!response.ok) {
+                            document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada,  falhou a requisição </font>";
+                            return new Error('falhou a requisição')
+                        }
+                        if (response.status === 404) {
+                            document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada,  404 não encontrado. </font>";
+                            return new Error('não encontrou qualquer resultado')
+                        }
+                        buttonenv.disabled = true;
+                        $('div.con-form').find('input').val('');
+                        $('div.con-form').find('textarea').val('');
+                        $('div.con-form').find('select').val('');
+                        $(function () {
+                            var staticBackdrop = document.getElementById('staticBackdrop');
+                            var myModal = new bootstrap.Modal(staticBackdrop);
+                            myModal.show();
+                        }
+                        );
+                        /*1.5sec delay */
+                        setTimeout(() => {
+                            hideSpinner()
+                        }, 1500)
+                    })
+                } catch (e) {
+                    document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem Erro:  <br>" + e.message + ". </font > ";
+                }
+            }
+            else {
+                document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada,  Email esta invalido inválido </font>";
+            }
+        }
+        );
+        function isAnyEmpty(el) {
+            var isEmpty = false, v;
+            el.each(function (e) {
+                v = $(this).val();
+                if (v == "" || v == null || v == undefined) {
+                    isEmpty = true
+                }
+            });
+            return isEmpty;
+        }
+        var el = $('input,  textarea,  select');
+        el.on('keyup', function () {
+            buttonenv.disabled = false;
+        }
+        );
+        function checarEmail() {
+            if (document.forms[0].email.value == "" || document.forms[0].email.value.indexOf('@') == -1 || document.forms[0].email.value.indexOf('.') == -1) {
+                document.getElementById("msgemail").innerHTML = "<font color='red'>Email inválido </font>";
+                window.erro = 0;
+                return false;
+            }
+            else {
+                document.getElementById("msgemail").innerHTML = '';
+                document.getElementById("msgemsis").innerHTML = '';
+                window.erro = 1;
+                return true;
+            }
+        }
     </script>
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
