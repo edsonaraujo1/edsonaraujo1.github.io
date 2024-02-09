@@ -1912,7 +1912,7 @@
                 /*Hide spinner*/
                 showSpinner();
                 try {
-                    fetch('https: //www.utyum.com.br/Seguro/Api/api/ContatoEmail/', {
+                    fetch('https://www.utyum.com.br/Seguro/Api/api/ContatoEmail/', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -1921,11 +1921,9 @@
                     }).then(response => {
                         if (!response.ok) {
                             document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada,  falhou a requisição </font>";
-                            return new Error('falhou a requisição')
                         }
                         if (response.status === 404) {
                             document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada,  404 não encontrado. </font>";
-                            return new Error('não encontrou qualquer resultado')
                         }
                         buttonenv.disabled = true;
                         $('div.con-form').find('input').val('');
@@ -1949,6 +1947,10 @@
             else {
                 document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada,  Email esta invalido inválido </font>";
             }
+            /*1.5sec delay */
+            setTimeout(() => {
+                hideSpinner()
+            }, 1500)
         }
         );
         function isAnyEmpty(el) {
