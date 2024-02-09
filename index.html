@@ -1921,10 +1921,18 @@
                     }).then(response => {
                         if (!response.ok) {
                             document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada,  falhou a requisição </font>";
+/*1.5sec delay */
+                        setTimeout(() => {
+                            hideSpinner()
+                        }, 1500)
                             return new Error('falhou a requisição')
                         }
                         if (response.status === 404) {
                             document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada,  404 não encontrado. </font>";
+/*1.5sec delay */
+                        setTimeout(() => {
+                            hideSpinner()
+                        }, 1500)
                             return new Error('não encontrou qualquer resultado')
                         }
                         buttonenv.disabled = true;
