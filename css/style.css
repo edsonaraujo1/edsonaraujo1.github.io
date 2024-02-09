@@ -866,3 +866,38 @@ button:disabled {
     display: block;
     text-align: center;
 }
+
+
+.sampleForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fa-spinner {
+    display: none;
+}
+
+.marpad {
+    padding: 7px 21px;
+}
+
+.back-to-top {
+    z-index: 99999;
+    cursor: pointer;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    line-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateY(100%);
+}
+
+    .back-to-top.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }

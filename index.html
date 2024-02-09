@@ -28,7 +28,9 @@
 </head>
 
 <body id="page-top">
-
+    <!-- Inicio: Botao Topo -->
+    <a class="back-to-top" onclick="scrollTopAnimated()"><img src="img/iraotopo.png" border="0" style="height:80px; width:80px;" /></a>
+    <!-- Fim:Botao Topo -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
 
@@ -68,8 +70,8 @@
     <div class="container-fluid p-0">
 
         <!--====================================================
-                        ABOUT
-    ======================================================-->
+                            ABOUT
+        ======================================================-->
         <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
             <div class="my-auto">
                 <div align="center">
@@ -143,8 +145,8 @@
         </section>
 
         <!--====================================================
-                        EXPERIENCE
-    ======================================================-->
+                            EXPERIENCE
+        ======================================================-->
         <section class="resume-section p-3 p-lg-5 " id="experience">
             <div class="row my-auto">
                 <div class="col-12">
@@ -267,8 +269,8 @@
         </section>
 
         <!--====================================================
-                        PORTFOLIO
-    ======================================================-->
+                            PORTFOLIO
+        ======================================================-->
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio">
             <div class="row my-auto">
                 <div class="col-12">
@@ -396,12 +398,86 @@
                         <img class="img-fluid" src="img/portfolio/Encriptor/encriptor.jpg" alt="">
                     </a>
                 </div>
+
+                <div class="col-12">
+                    <br />
+                    <h2 class="  text-center">Outros Projetos Desenvolvidos</h2>
+                    <div class="mb-5 heading-border"></div>
+                </div>
+
+                <ul class="fa-ul mb-0 marpad">
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Framework em ASP.NET MVC para criação de sistemas.
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Sistema Controle de Estoque
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Sistema de Locação de Veículos
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Sistema de Geração de Ordem de Serviço
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Sistema Frente de Caixa em Visual Fox Pro &nbsp;<a href="https://github.com/edsonaraujo1/Caixa_FoxPro" target="_blank"><i class="fa fa-globe"></i></a>
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Portal de Notícias Sindificios Mogi das Cruzes &nbsp;<a href="http://www.sindificiosmogi.com.br" target="_blank"><i class="fa fa-globe"></i></a>
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Framework em PHP para criação de sistemas.
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Api com autenticação token de Geração de Mídias e Notícias em ASP.NET Core 2.2&nbsp;
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Implantação de Aplicativos em nuvem Microsoft Azure.
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Criação e Manutenção Sistema Crefisa.
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Cadastro Simples em ASP.NET API/Rest Crud baseado em Procedure &nbsp;<a href="https://www.utyum.com.br/Teste/Motorista" target="_blank"><i class="fa fa-globe"></i></a>
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Aplicativo em ASP.Net Windows-Form em C# - WPF usando SqlServer e MySQL &nbsp;
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Aplicativo Feito no Framework Blazor Desenvolvido em C# e SqlServer &nbsp;
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Aplicação Agendamento de Profissional p/ Android e iOS em React-Native&nbsp;
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Api com autenticação token de Agendamento de Profissional em PHP Laravel&nbsp;
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Api com autenticação token de Condomínios em JavaScript NodeJs&nbsp;
+                    </li>
+                </ul>
             </div>
+
         </section>
 
         <!--====================================================
-                        SKILLS
-    ======================================================-->
+                            SKILLS
+        ======================================================-->
         <section class=" d-flex flex-column" id="skills">
             <div class="p-lg-5 p-3 skill-cover">
                 <h3 class="text-center text-white">HABILIDADES DE CODIFICAÇÃO</h3>
@@ -531,8 +607,8 @@
         </section>
 
         <!--====================================================
-                           AWARDS
-    ======================================================-->
+                               AWARDS
+        ======================================================-->
         <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
             <div class="row my-auto">
                 <div class="col-12">
@@ -616,8 +692,8 @@
         </section>
 
         <!--====================================================
-                          CONTACT
-    ======================================================-->
+                              CONTACT
+        ======================================================-->
         <section class="resume-section p-3 p-lg-5 d-flex flex-column">
             <div class="row my-auto" id="contact">
                 <div class="col-md-8">
@@ -652,7 +728,11 @@
                             </div>
                             <div class="col-md-12"><textarea name="mensagem" id="mensagem" placeholder="Escreva sua Mensagem" required></textarea></div>
                             <label id="msgemsis"></label>
-                            <div class="col-md-12 sub-but"><button type="submit" id="Enviar" class="btn btn-general btn-white" disabled>Enviar</button></div>
+                            <div class="col-md-12 sub-but">
+                                <button type="submit" id="Enviar" class="btn btn-general btn-white" disabled>
+                                    <span id="btnSubmitText">Enviar</span><i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -704,8 +784,8 @@
         </section>
 
         <!--====================================================
-                          MAP
-    ======================================================-->
+                              MAP
+        ======================================================-->
         <section class=" d-flex flex-column" id="maps">
             <div id="map">
                 <div class="map-responsive">
@@ -1685,7 +1765,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>Web Site criado para a empresa Utyum sistemas que presta serviço de gestão em tecnologia e Segurança de Dados, Desenvolvido em SinglePage com tecnologia Angular 6 com consumo de API Rest desenvolvidos em .Net ASP.Net MVC com Banco de Dados SQL Server, As APIs buscam as informações para alimentar as informações dos Blogs e Envio de Emails de Contatos, Pagina com Modo escuro DarkMode e Tradução para Português, Inglês, Chinês e Frances.</p>
+                                    <p>Sistema criando em Visual Basic 6, para uma plataforma de Eventos e promoções, com controle de entrada, visita e geração de cartão com código de barras, Impressão de Certificado de presença e controle de presença, Catalogo com Grupos de Eventos, Cadastro de Funcionários e Participantes, Controle de Gastos e Custos, Convenio de Empresas e Organizadores. Modulo em Desktop Windows para Organizadora de Eventos.</p>
                                     <ul class="list-inline item-details">
                                         <li>
                                             Cliente:
@@ -1708,7 +1788,7 @@
                                         <li>
                                             Link:
                                             <strong>
-                                                <a href="https://www.utyum.com.br" target="_blank">SistemaXP</a>
+                                                <a href="https://github.com/edsonaraujo1/ProgramaXP" target="_blank">SistemaXP</a>
                                             </strong>
                                         </li>
                                     </ul>
@@ -1723,7 +1803,7 @@
             </div>
         </div>
     </div>
-    <!--Sistema em VB Gestão de Eventos-->
+    <!--Sistema Encriptor 3-->
     <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -1737,7 +1817,7 @@
                         <div class="modal-body">
                             <div class="title-bar">
                                 <div class="col-md-12">
-                                    <h2 class="text-center">Sistema Gestão de Eventos</h2>
+                                    <h2 class="text-center">Sistema Encriptador/Descriptador</h2>
                                     <div class="heading-border"></div>
                                 </div>
                             </div>
@@ -1746,7 +1826,7 @@
                                     <img class="img-fluid img-centered" src="img/portfolio/Encriptor/encriptor.jpg" alt="">
                                 </div>
                                 <div class="col-md-6">
-                                    <p>Web Site criado para a empresa Utyum sistemas que presta serviço de gestão em tecnologia e Segurança de Dados, Desenvolvido em SinglePage com tecnologia Angular 6 com consumo de API Rest desenvolvidos em .Net ASP.Net MVC com Banco de Dados SQL Server, As APIs buscam as informações para alimentar as informações dos Blogs e Envio de Emails de Contatos, Pagina com Modo escuro DarkMode e Tradução para Português, Inglês, Chinês e Frances.</p>
+                                    <p>Sistema criando em WindowsForm .Net MVC 4.5 em C#, Modulo de criação de encriptação de dados sensíveis para proteção em base de dados, Proteger CPF, CNPJ, RG, CEP e Data de Nascimento, Usando uma criptografia com chave secreta onde os dados ficam guardados em criptografia de 128 a 256bits com inúmeras possibilidade de criptação de dados, Desenvolvido para proteção e consulta em sistemas diversos.</p>
                                     <ul class="list-inline item-details">
                                         <li>
                                             Cliente:
@@ -1763,13 +1843,13 @@
                                         <li>
                                             Tecnologia:
                                             <strong>
-                                                .Net MVC C#
+                                                WindowsForm .Net MVC C#
                                             </strong>
                                         </li>
                                         <li>
                                             Link:
                                             <strong>
-                                                <a href="https://www.utyum.com.br" target="_blank">SistemaXP</a>
+                                                <a href="https://github.com/edsonaraujo1/AppEncrypitor3" target="_blank">Encriptor3</a>
                                             </strong>
                                         </li>
                                     </ul>
@@ -1793,7 +1873,7 @@
     <script src="js/counter/jquery.counterup.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-        $(document).ready(function () { $(".filter-b").click(function () { var value = $(this).attr('data-filter'); if (value == "all") { $('.filter').show('1000'); } else { $(".filter").not('.' + value).hide('3000'); $('.filter').filter('.' + value).show('3000'); } }); if ($(".filter-b").removeClass("active")) { $(this).removeClass("active"); } $(this).addClass("active"); }); /* SKILLS */ $(function () { $('.counter').counterUp({ delay: 10, time: 2000 }); }); const buttonenv = document.getElementById('Enviar'); buttonenv.style.opacity = 0.7; buttonenv.disabled = true; var erro; const formEl = document.getElementById('form-api'); formEl.addEventListener('submit', evento => { evento.preventDefault(); const formData = new FormData(formEl); const data = Object.fromEntries(formData); if (window.erro == 1) { try { fetch('https://www.utyum.com.br/Seguro/Api/api/ContatoEmail/', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }).then(response => { if (!response.ok) { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, falhou a requisição </font>"; return new Error('falhou a requisição') } if (response.status === 404) { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, 404 não encontrado. </font>"; return new Error('não encontrou qualquer resultado') } buttonenv.disabled = true; $('div.con-form').find('input').val(''); $('div.con-form').find('textarea').val(''); $('div.con-form').find('select').val(''); $(function () { var staticBackdrop = document.getElementById('staticBackdrop'); var myModal = new bootstrap.Modal(staticBackdrop); myModal.show(); }); }) } catch (e) { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem Erro: <br>" + e.message + ". </font > "; } } else { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, Email esta invalido inválido </font>"; } }); function isAnyEmpty(el) { var isEmpty = false, v; el.each(function (e) { v = $(this).val(); if (v == "" || v == null || v == undefined) { isEmpty = true } }); return isEmpty; } var el = $('input, textarea, select'); el.on('keyup', function () { buttonenv.disabled = false; }); function checarEmail() { if (document.forms[0].email.value == "" || document.forms[0].email.value.indexOf('@') == -1 || document.forms[0].email.value.indexOf('.') == -1) { document.getElementById("msgemail").innerHTML = "<font color='red'>Email inválido </font>"; window.erro = 0; return false; } else { document.getElementById("msgemail").innerHTML = ''; document.getElementById("msgemsis").innerHTML = ''; window.erro = 1; return true; } }
+        $(document).ready(function () { $(".filter-b").click(function () { var value = $(this).attr('data-filter'); if (value == "all") { $('.filter').show('1000'); } else { $(".filter").not('.' + value).hide('3000'); $('.filter').filter('.' + value).show('3000'); } }); if ($(".filter-b").removeClass("active")) { $(this).removeClass("active"); } $(this).addClass("active"); }); /* SKILLS */ $(function () { $('.counter').counterUp({ delay: 10, time: 2000 }); }); const buttonenv = document.getElementById('Enviar'); buttonenv.style.opacity = 0.7; buttonenv.disabled = true; var erro; const formEl = document.getElementById('form-api') formEl.addEventListener('submit', evento => { evento.preventDefault(); const formData = new FormData(formEl); const data = Object.fromEntries(formData); if (window.erro == 1) {/*Hide spinner*/ showSpinner(); try { fetch('https://www.utyum.com.br/Seguro/Api/api/ContatoEmail/', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) }).then(response => { if (!response.ok) { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, falhou a requisição </font>"; return new Error('falhou a requisição') } if (response.status === 404) { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, 404 não encontrado. </font>"; return new Error('não encontrou qualquer resultado') } buttonenv.disabled = true; $('div.con-form').find('input').val(''); $('div.con-form').find('textarea').val(''); $('div.con-form').find('select').val(''); $(function () { var staticBackdrop = document.getElementById('staticBackdrop'); var myModal = new bootstrap.Modal(staticBackdrop); myModal.show(); }); /*1.5sec delay */ setTimeout(() => { hideSpinner() }, 1500) }) } catch (e) { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem Erro: <br>" + e.message + ". </font > "; } } else { document.getElementById("msgemsis").innerHTML = "<font color='red'>Mensagem não Enviada, Email esta invalido inválido </font>"; } }); function isAnyEmpty(el) { var isEmpty = false, v; el.each(function (e) { v = $(this).val(); if (v == "" || v == null || v == undefined) { isEmpty = true } }); return isEmpty; } var el = $('input, textarea, select'); el.on('keyup', function () { buttonenv.disabled = false; }); function checarEmail() { if (document.forms[0].email.value == "" || document.forms[0].email.value.indexOf('@') == -1 || document.forms[0].email.value.indexOf('.') == -1) { document.getElementById("msgemail").innerHTML = "<font color='red'>Email inválido </font>"; window.erro = 0; return false; } else { document.getElementById("msgemail").innerHTML = ''; document.getElementById("msgemsis").innerHTML = ''; window.erro = 1; return true; } }
     </script>
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
