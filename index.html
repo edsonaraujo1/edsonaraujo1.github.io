@@ -2235,6 +2235,22 @@
                 return true;
             }
         }
+        function checarVisita() {
+
+            const update = {
+                sistema: 'PortifolioEdson'
+            };
+
+            fetch('https://www.utyum.com.br/Seguro/Api/api/VisitaSistemas/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(update)
+            }).then(res => res.json()).then(data => console.log(update))
+
+        }
+        checarVisita();
     </script>
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
