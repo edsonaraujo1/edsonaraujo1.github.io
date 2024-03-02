@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\img",
+    "\\img\\portfolio",
+    "\\img\\portfolio\\jogo",
+    "\\img\\portfolio\\nuget"
   ],
-  "SelectedNode": "\\Curriculo_Edson_Atual.pdf",
   "PreviewInSolutionExplorer": false
 }
