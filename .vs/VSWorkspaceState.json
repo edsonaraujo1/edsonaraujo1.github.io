@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\img",
-    "\\img\\portfolio",
-    "\\img\\portfolio\\jogo",
-    "\\img\\portfolio\\nuget"
+    "\\img\\portfolio"
   ],
+  "SelectedNode": "\\css",
   "PreviewInSolutionExplorer": false
 }
