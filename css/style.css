@@ -918,3 +918,7 @@ button:disabled {
     border-style: solid;
     border-radius: 3% !important;
 }
+
+.logo_programer {
+	font-size: 79px !important;
+}
