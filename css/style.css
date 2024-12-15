@@ -57,7 +57,7 @@ a:active {
                   SOCIAL-ICON
 ====================================================*/
   .list-social-icons a {
-      color: #1d858c!important;
+      color: #225053 !important;
       ;
   }
 
@@ -202,7 +202,7 @@ a:active {
   }
 
   .bg-primary {
-      background-color: #1d858c!important;
+      background-color: #225053 !important;
   }
 
   .text-primary {
@@ -229,7 +229,7 @@ a:active {
   }
 
   .second_name {
-      color: #1d858c!important;
+      color: #225053 !important;
   }
 
   .atualizacao {
@@ -691,7 +691,7 @@ a:active {
 }
 
 #contact .contact-cont h3{
-  color:#555;
+  color:#225053;
   font-size: 45px;
 }
 
@@ -726,7 +726,7 @@ a:active {
 } 
 
 .contact-box-desc h3{
-  color:#555;
+  color:#225053;
 }
 
 .contact-box-desc h3 i{
@@ -911,7 +911,7 @@ button:disabled {
     border-radius: 4% !important;
     border-width: medium !important;
     border-style: solid !important;
-    border-color: #1d858c !important;
+    border-color: #225053  !important;
 }
 
 .img_show {
@@ -922,3 +922,22 @@ button:disabled {
 .logo_programer {
 	font-size: 79px !important;
 }
+
+p.typed-opacity {
+    background-size: cover;
+    width: 100%;
+    color: white;
+    position: relative;
+    z-index: 1;
+	font-size: 22px;
+    color: #225053;
+}
+p.typed-opacity::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .8;
+    z-index: -1;
