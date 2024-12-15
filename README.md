@@ -1,6 +1,6 @@
 ## Edson de Araujo - Curriculo Apresentção..
 <p align="center">
-  <img src="https://i.postimg.cc/Pqxk0dfZ/Campa-Oficial-linkedin.jpghttps://i.postimg.cc/Pqxk0dfZ/Campa-Oficial-linkedin.jpg" width="100%" alt='perfil'/>
+  <img src="https://i.postimg.cc/Pqxk0dfZ/Campa-Oficial-linkedin.jpg" width="100%" alt='perfil'/>
 </p>
 <h2 class="mb-3">Habilidades</h2>
                     <p class="text-justify">
